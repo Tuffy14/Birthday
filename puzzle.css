@@ -1,0 +1,198 @@
+/* General Styling */
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #ff7eb3, #ff4d88);
+    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10vh; /* Fixed space at the top */
+    box-sizing: border-box;
+}
+
+/* Lovey-Dovey Game Instructions */
+#game-instructions {
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4); /* Soft pink gradient */
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 15px;
+    max-width: 90%;
+    margin-bottom: 30px; /* Space below the box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: float 2s ease-in-out infinite alternate;
+    display: none; /* Hidden by default */
+}
+
+/* Adjust the heading inside the game instructions */
+#game-instructions h2 {
+    margin: 0 0 15px; /* Add space below the heading */
+}
+
+/* Cute floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+/* Puzzle Container */
+#puzzle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8vh; /* Adds spacing below */
+}
+
+/* Letters Section */
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* Adds spacing between letters */
+    margin-bottom: 20px;
+}
+
+.letter {
+    padding: 8px;
+    background: white;
+    color: #ff4d88;
+    border: 2px solid #ff4d88;
+    border-radius: 5px;
+    cursor: grab;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 40px; /* Same size as drop zones */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Drop Zones */
+#drop-zones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* Adds spacing between drop zones */
+}
+
+.drop-zone {
+    width: 40px; /* Same as letter size */
+    height: 40px;
+    border: 2px dashed white; /* White dashed border */
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* Filled drop-zone */
+.drop-zone.filled {
+    border: 2px solid white; /* Makes it look like part of the puzzle */
+    background: white;
+    color: #ff4d88;
+    font-weight: bold;
+}
+
+/* Dynamic Button (Skip or Reveal) */
+#dynamic-button {
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4); /* Soft pink gradient */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Space above the button */
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+#dynamic-button:hover {
+    background: #ff2a66; /* Darker pink on hover */
+}
+
+/* Popup Background */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Card */
+.popup-content {
+    background: white;
+    color: #ff4d88;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.popup-content h2 {
+    margin: 0 0 10px;
+}
+
+.popup-content p {
+    margin: 10px 0;
+}
+
+/* Buttons in Popups */
+#next-level,
+#close-level-4-popup,
+#close-love-letter,
+#close-start-popup {
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4); /* Soft pink gradient */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+#next-level:hover,
+#close-level-4-popup:hover,
+#close-love-letter:hover,
+#close-start-popup:hover {
+    background: #ff2a66; /* Darker pink on hover */
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    body {
+        padding-top: 8vh; /* Adjusted spacing for smaller screens */
+    }
+
+    #game-instructions {
+        font-size: 1.2rem;
+        padding: 15px; /* Slightly less padding on mobile */
+    }
+
+    #puzzle-container {
+        padding-bottom: 10vh; /* Adjusted spacing */
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the Hearts</title>
+  <link rel="stylesheet" href="adventure.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome for icons -->
+</head>
+<body>
+  <!-- Start Popup -->
+  <div id="start-popup">
+    <div id="popup-card">
+      <h1>Welcome to Catch the Hearts!</h1>
+      <p>
+        Your goal is to collect as many hearts as possible before time runs out or you miss 3 hearts. Use the arrow keys or touch controls to move the basket and catch the falling hearts. Are you ready?
+      </p>
+      <button id="start-game-button">Let's Collect!</button>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <!-- New Home Button Section -->
+    <div id="home-section">
+      <button id="home-button">
+        <i class="fas fa-home"></i> <!-- Home Icon -->
+      </button>
+      <span>HOME</span>
+    </div>
+
+    <!-- Score Display -->
+    <div id="score">Score: 0</div>
+
+    <!-- Timer -->
+    <div id="timer">Time Left: 60</div>
+
+    <!-- Basket -->
+    <div id="basket"></div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="game-over">
+    <h1>Missed three hearts? Classic! Even the neighborhood kucing would’ve done better. 😹 But it’s your birthday, so you get a free pass. Meow-velous day to you! 🎉🐾</h1>
+    <p>Your Score: <span id="final-score">0</span></p>
+    <button id="restart-button">Play Again</button>
+  </div>
+
+  <!-- Love Message Popup -->
+  <div id="love-message-popup">
+    <div id="popup-card">
+      <h1>You Did It!</h1>
+      <p id="love-message">
+            Happy Birthday, Rin! 🎂<br>
+            You know those hearts you’ve been collecting?  
+            They weren’t just random points or game stuff — they were little pieces of appreciation from strangers whose days you unknowingly brightened.  
+            That one time you smiled at someone who felt invisible, or sent a funny message when someone needed a laugh — it all mattered more than you think.  
+            
+            I still remember all our weird late-night talks, the inside jokes that make zero sense, and how you always seem to notice when something’s off.  
+            Life’s just better with you in it.  
+            
+            I hope today brings all your favorite things — good food, silly surprises, and people who remind you how loved you are.  
+            You deserve every bit of it, and more.
+                </p>      
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="adventure.js"></script>
+</body>
+</html>

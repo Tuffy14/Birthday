@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Rin!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div class="intro" id="intro">
+    <h1>🎉 Happy Birthday, Rin! 🎉</h1>
+    <p id="introText">Tap "Start" to begin your magical journey!</p>
+    <div class="button-container">
+      <button id="startButton">Start</button>
+      <button id="playGameButton">Game </button>
+      <button id="puzzleButton">Puzzle </button>
+    </div>
+  </div>
+
+  <!-- Game Scene -->
+  <div class="game" id="game" style="display: none">
+    <h2>✨ Unlock the Magic ✨</h2>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+    <div class="magic-box-container" id="magicBoxContainer"></div>
+    <div class="message-box" id="messageBox"></div>
+  </div>
+
+  <!-- Celebration Scene Container -->
+  <div id="celebrationContainer"></div>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/sounds/background-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
